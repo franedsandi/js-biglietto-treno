@@ -22,19 +22,19 @@ else if(isNaN(distance)){
   document.getElementById('output').innerHTML = message;
 }
 //3
-const saluto = 'Ciao tuo biglietto costa';
-const fullprice = distance * km;
+saluto = 'Ciao tuo biglietto costa';
+fullprice = distance * km;
   if( age <= 10 ){
-    const message = saluto + " " + ( fullprice * 0.8 ) + "€";
+    ticketunderage = Math.abs (fullprice * 0.8).toFixed(2) 
+    const message = saluto + " " + ticketunderage + "€";
     console.log(message);
     document.getElementById('output').innerHTML = message;}
   else if ( age >= 65 ){
-    const message = saluto + " " + ( fullprice * 0.4 ) + "€";
+    ticketadult = Math.abs (fullprice * 0.4).toFixed(2) 
+    const message = saluto + " " + ticketadult + "€";
     console.log(message);
     document.getElementById('output').innerHTML = message;}
   else{
     const message = saluto + " " + ( fullprice ) + "€";
     console.log(message);
     document.getElementById('output').innerHTML = message;}
-
-document.getElementById('output').innerHTML = message;
