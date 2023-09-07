@@ -25,16 +25,17 @@ else if(isNaN(distance)){
 saluto = 'Ciao tuo biglietto costa';
 fullprice = distance * km;
   if( age <= 10 ){
+    //4
     ticketunderage = Math.abs (fullprice * 0.8).toFixed(2) 
     const message = saluto + " " + ticketunderage + "€";
     console.log(message);
     document.getElementById('output').innerHTML = message;}
   else if ( age >= 65 ){
+    //4
     ticketadult = Math.abs (fullprice * 0.4).toFixed(2) 
     const message = saluto + " " + ticketadult + "€";
     console.log(message);
     document.getElementById('output').innerHTML = message;}
-  else{
-    const message = saluto + " " + ( fullprice ) + "€";
-    console.log(message);
-    document.getElementById('output').innerHTML = message;}
+const message = saluto + " " + ( fullprice ) + "€";
+console.log(message);
+document.getElementById('output').innerHTML = message;
