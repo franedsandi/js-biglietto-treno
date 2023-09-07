@@ -36,6 +36,7 @@ fullprice = distance * km;
     const message = saluto + " " + ticketadult + "€";
     console.log(message);
     document.getElementById('output').innerHTML = message;}
-const message = saluto + " " + ( fullprice ) + "€";
-console.log(message);
-document.getElementById('output').innerHTML = message;
+  else{
+    const message = saluto + " " + ( fullprice ) + "€";
+    console.log(message);
+    document.getElementById('output').innerHTML = message;}
