@@ -1,4 +1,40 @@
-/* 1. Chiedi all’utente la eta,
-2. chiedi al utentne la distanza a percorrere,
-3. se si puo, calcolare il respettivo sconto
-4. Output del prezo in forma humana ( 2 decimali) */
+/* 1. Chiedi all’utente la eta, yes
+2. chiedi al utente la distanza a percorrere, yes
+3. se si puo, calcolare il respettivo sconto yes
+4. Output del prezo in forma humana ( 2 decimali) 
+5. confermare che si inseriscano numeri yes*/
+
+//1
+const age = parseInt( prompt('Inserisci la tua eta'));
+//2
+const distance = parseInt( prompt('Inserisci la distanza a percorrere in km'));
+const km = 0.21
+let datiValidi = true;
+//5
+if(isNaN(age)){
+  message = 'Errore! Non hai inserito un numero';
+  datiValidi = false;
+  document.getElementById('output').innerHTML = message;
+}
+else if(isNaN(distance)){
+  message = 'Errore! Non hai inserito un numero';
+  datiValidi = false;
+  document.getElementById('output').innerHTML = message;
+}
+//3
+const saluto = 'Ciao tuo biglietto costa';
+const fullprice = distance * km;
+  if( age <= 10 ){
+    const message = saluto + " " + ( fullprice * 0.8 ) + "€";
+    console.log(message);
+    document.getElementById('output').innerHTML = message;}
+  else if ( age >= 65 ){
+    const message = saluto + " " + ( fullprice * 0.4 ) + "€";
+    console.log(message);
+    document.getElementById('output').innerHTML = message;}
+  else{
+    const message = saluto + " " + ( fullprice ) + "€";
+    console.log(message);
+    document.getElementById('output').innerHTML = message;}
+
+document.getElementById('output').innerHTML = message;
