@@ -9,22 +9,22 @@ const age = parseInt( prompt('Inserisci la tua eta'));
 //2
 const distance = parseInt( prompt('Inserisci la distanza a percorrere in km'));
 const km = 0.21
-let datiValidi = true;
+let ok = true;
 //5
 if(isNaN(age)){
   message = 'Errore! Non hai inserito un numero';
-  datiValidi = false;
+  ok = false;
   document.getElementById('output').innerHTML = message;
 }
 else if(isNaN(distance)){
   message = 'Errore! Non hai inserito un numero';
-  datiValidi = false;
+  ok = false;
   document.getElementById('output').innerHTML = message;
 }
 //3
 saluto = 'Ciao tuo biglietto costa';
 fullprice = distance * km;
-  if( age <= 10 ){
+  if( age <= 17 ){
     //4
     ticketunderage = Math.abs (fullprice * 0.8).toFixed(2) 
     const message = saluto + " " + ticketunderage + "€";
